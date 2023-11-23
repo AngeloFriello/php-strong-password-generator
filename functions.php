@@ -15,5 +15,5 @@ function randomPassword($lengthPass) {
     }
     return implode($pass); 
 }
-
+    
 ?>

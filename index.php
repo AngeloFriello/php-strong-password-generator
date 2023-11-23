@@ -1,6 +1,13 @@
 <?php  
     include 'functions.php';
-    $length = $_GET['lunghezza'];
+    
+    $length = $_GET['lunghezza'] ?? null;
+
+    $password = randomPassword($length)
+
+    // if ($password) {
+    //     $_SESSION['password'] = $password;
+    //   }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +23,6 @@
         <input type="submit" value="invia">
     </form>
 
-    <h1>la tua password  è : <?php echo randomPassword($length)?></h1>
+    <h1>la tua password  è : <?php echo $password ?></h1>
 </body>
 </html>
